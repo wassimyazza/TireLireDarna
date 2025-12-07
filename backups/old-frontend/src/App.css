@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-shell main {
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.cta-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.token-grid,
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.token-card,
+.service-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.token-card__status {
+  font-weight: 600;
+  color: #374151;
+}
+
+.token-card__hash {
+  font-size: 0.8rem;
+  background: #f3f4f6;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.service-card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  gap: 0.25rem;
+}
+
+.service-card input {
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.service-card button,
+.api-endpoint__form button,
+.sso-btn {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  background-color: #111827;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.api-section {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.04);
+}
+
+.api-section__header {
+  margin-bottom: 1.25rem;
+}
+
+.api-section__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.api-endpoint {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #f9fafb;
+}
+
+.api-endpoint__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.api-endpoint__method {
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  background: #111827;
+  color: #fff;
+}
+
+.api-endpoint__auth {
+  margin-left: auto;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.api-endpoint__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.api-endpoint__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.api-endpoint__label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  gap: 0.3rem;
+}
+
+.api-endpoint__label input,
+.api-endpoint__label textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.6rem;
+  font-family: inherit;
+}
+
+.api-endpoint__result {
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px dashed #d1d5db;
+  min-height: 80px;
+}
+
+.api-endpoint__result pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.85rem;
+}
+
+.api-endpoint__error {
+  color: #dc2626;
+}
+
+.api-endpoint__placeholder {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.sso-callback {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .api-endpoint__header {
+    flex-wrap: wrap;
+  }
+}
