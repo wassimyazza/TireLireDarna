@@ -1,6 +1,6 @@
 # TireLireDarna Frontend
 
-Complete React TypeScript frontend for the TireLireDarna platform - combining real estate (Darna) and savings groups (Tirelire) with integrated SSO authentication.
+Complete React frontend for the TireLireDarna platform - combining real estate (Darna) and savings groups (Tirelire) with integrated SSO authentication.
 
 ## Features
 
